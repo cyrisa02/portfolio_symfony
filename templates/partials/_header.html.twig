@@ -34,6 +34,16 @@
 					</div>
 				</li>
 			</ul>
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+				{% if app.user %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mon compte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('app_logout') }}">Me déconnecter</a>
+                    </li>                 
+				{% endif %}
+			</ul>
 			<form class="d-flex">
 				<input class="form-control me-sm-2" type="text" placeholder="Search">
 				<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
