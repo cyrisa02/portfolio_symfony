@@ -22,6 +22,24 @@ class ProjectController extends AbstractController
         ]);
     }
 
+    #[Route('/symfony', name: 'app_project_indexsymfony', methods: ['GET'])]
+    public function indexsymfony(ProjectRepository $projectRepository): Response
+    {
+        return $this->render('pages/project/indexsymfony.html.twig', [
+            'projects' => $projectRepository->findAll(),
+        ]);
+    }
+
+    #[Route('/angular', name: 'app_project_indexangular', methods: ['GET'])]
+    public function indexangular(ProjectRepository $projectRepository): Response
+    {
+        return $this->render('pages/project/indexangular.html.twig', [
+            'projects' => $projectRepository->findAll(),
+        ]);
+    }
+
+
+
     #[Route('/new', name: 'app_project_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ProjectRepository $projectRepository,FileUploader $fileUploader): Response
     {
