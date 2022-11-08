@@ -4,6 +4,36 @@
 {% endblock %}
 
 {% block body %}
+	<nav class="navbar navbar-light bg-light shadow-sm">
+		<div class="container-lg">
+			<a class="navbar-brand text-primary fw-bold fs-4" href="#">C.G</a>
+
+			<div class="nav-item dropdown">
+				<button class="nav-link btn btn-secondary  px-3" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-bars"></i>
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" href="{{ path('home.index')}}">Accueil</a>
+
+					<a class="dropdown-item" href="#about">A propos</a>
+					<a class="dropdown-item" href="#services">Prestations</a>
+
+
+					<a class=" dropdown-item" href=" {{ path('app_project_indexsymfony')}} ">Symfony</a>
+					<a class="dropdown-item" href="{{ path('app_project_indexangular')}}">Angular</a>
+					<a class="dropdown-item" href="{{ path('app_project_indexwordpress')}}">Wordpress</a>
+					<a class="dropdown-item" href="#testimonials">Témoignages</a>
+
+
+					<a class="dropdown-item" href="{{ path('app_contact_new')}}">Me Contacter</a>
+
+
+					{# <div class="dropdown-divider"></div>
+																																																																																																																	<a class="dropdown-item" href="#">Separated link</a> #}
+				</div>
+			</div>
+		</div>
+	</nav>
 
 	<!-- Portfolio Start -->
 	<section class="home py-5" id="home">
@@ -60,7 +90,8 @@
 					<div class="col-lg-12 d-flex align-items-center">
 						<a href="{{ asset('assets/images/CYRIL_GOURDON.pdf')}}" class="btn btn-secondary me-5 px-3">Mon CV</a>
 						<div class="social-links">
-							<a href="https://www.linkedin.com/in/cyril-gourdon-web-developpeur-symfony-soissons/" class="text-dark me-2 fs-5">
+							<a href="https://www.linkedin.com/in/cyril-gourdon-web-developpeur-symfony-angular/" class="text-dark me-2 fs-5">
+
 								<i class="fab fa-linkedin-in"></i>
 							</a>
 
@@ -146,7 +177,8 @@
 <div class="row justify-content-center">
 	<div class="col-lg-8 ">
 		<div class="section-title text-center">
-			<h2 class="fw-bold mb-5">Mes projets</h2>
+			<h2 class="fw-bold mb-5">Mes projets Symfony</h2>
+			<h4>Mes projets Symfony sont accompagnés de documents techniques stockés sur le github.</h4>
 		</div>
 	</div>
 </div>
@@ -154,31 +186,22 @@
 
 	<div class="col-md-6 col-lg-4">
 		<div class="portfolio-item">
-			<img src="{{ asset('assets/images/logo.png')}}" class="w-100 img-thumbnail" alt="">
-			<h3 class="text-capitalize fs-5 my-2">Titre du projet</h3>
+			<img src="{{ asset('assets/images/casutilisation.png')}}" class="w-100 img-thumbnail" alt="">
+			<h3 class="text-capitalize fs-5 my-2">Documentation technique</h3>
 			<p class="mb-4">
-				<a href="#" class="text-secondary text-decoration-none">Lien</a>
+				<a href="https://github.com/cyrisa02/asdec/tree/main/documentation_technique" class="text-secondary text-decoration-none">Lien</a>
+
 			</p>
 		</div>
 	</div>
 
 	<div class="col-md-6 col-lg-4">
 		<div class="portfolio-item">
-			<img src="{{ asset('assets/images/logo.png')}}" class="w-100 img-thumbnail" alt="">
-			<h3 class="text-capitalize fs-5 my-2">Titre du projet</h3>
+			<img src="{{ asset('assets/images/youtube.png')}}" class="w-100 img-thumbnail" alt="">
+			<h3 class="text-capitalize fs-5 my-2">Vidéos de fonctionnement</h3>
 			<p class="mb-4">
-				<a href="#" class="text-secondary text-decoration-none">Lien</a>
-			</p>
-		</div>
-	</div>
+				<a href="https://www.youtube.com/channel/UCwx0nLuqWHxVly5v_u-ll4Q/videos" class="text-secondary text-decoration-none">Lien</a>
 
-
-	<div class="col-md-6 col-lg-4">
-		<div class="portfolio-item">
-			<img src="{{ asset('assets/images/logo.png')}}" class="w-100 img-thumbnail" alt="">
-			<h3 class="text-capitalize fs-5 my-2">Titre du projet</h3>
-			<p class="mb-4">
-				<a href="#" class="text-secondary text-decoration-none">Lien</a>
 			</p>
 		</div>
 	</div>
@@ -186,10 +209,44 @@
 
 	<div class="col-md-6 col-lg-4">
 		<div class="portfolio-item">
-			<img src="{{ asset('assets/images/logo.png')}}" class="w-100 img-thumbnail" alt="">
-			<h3 class="text-capitalize fs-5 my-2">Titre du projet</h3>
+			<img src="{{ asset('assets/images/diagrammeUML.png')}}" class="w-100 img-thumbnail" alt="">
+			<h3 class="text-capitalize fs-5 my-2">Diagrammes UML</h3>
 			<p class="mb-4">
-				<a href="#" class="text-secondary text-decoration-none">Lien</a>
+				<a href="https://github.com/cyrisa02/diagrammes-UML" class="text-secondary text-decoration-none">Lien</a>
+
+			</p>
+		</div>
+	</div>
+
+
+	<div class="col-md-6 col-lg-4">
+		<div class="portfolio-item">
+			<img src="{{ asset('assets/images/manuelutilisation.png')}}" class="w-100 img-thumbnail" alt="">
+			<h3 class="text-capitalize fs-5 my-2">Manuel d'utilisation</h3>
+			<p class="mb-4">
+				<a href="https://github.com/cyrisa02/asdec/tree/main/d_manuel_d_utilisation" class="text-secondary text-decoration-none">Lien</a>
+
+			</p>
+		</div>
+	</div>
+
+	<div class="col-md-6 col-lg-4">
+		<div class="portfolio-item">
+			<img src="{{ asset('assets/images/charte.png')}}" class="w-100 img-thumbnail" alt="">
+			<h3 class="text-capitalize fs-5 my-2">Charte Graphique</h3>
+			<p class="mb-4">
+				<a href="https://github.com/cyrisa02/asdec/tree/main/d_charte_graphique" class="text-secondary text-decoration-none">Lien</a>
+
+			</p>
+		</div>
+	</div>
+	<div class="col-md-6 col-lg-4">
+		<div class="portfolio-item">
+			<img src="{{ asset('assets/images/wireframe.png')}}" class="w-100 img-thumbnail" alt="">
+			<h3 class="text-capitalize fs-5 my-2">Wireframes</h3>
+			<p class="mb-4">
+				<a href="https://github.com/cyrisa02/asdec/tree/main/d_charte_graphique" class="text-secondary text-decoration-none">Lien</a>
+
 			</p>
 		</div>
 	</div>
@@ -226,12 +283,12 @@
 			</div>
 			<p class="text-muted mt-3">Michèle m'a fait confiance pour la réalisation de son site vitrine que j'ai réalisé avec Wordpress.</p>
 			<p class=" mt-3">Oh punaise Cyril je n'en reviens pas !!!
-																																																																										Je ne m'attendais pas à quelque chose d'aussi abouti !
-																																																																										J'adore !
-																																																																										Le fond blanc me plaît beaucoup.
-																																																																										Est ce que je peux mettre des photos perso à la place des images ?
-																																																																										Wouah je suis ravie et demain matin je travaillerai toutes tes questions.
-																																																																										Merci de tout cœur 🙏</p>
+																																																																																																																																						Je ne m'attendais pas à quelque chose d'aussi abouti !
+																																																																																																																																						J'adore !
+																																																																																																																																						Le fond blanc me plaît beaucoup.
+																																																																																																																																						Est ce que je peux mettre des photos perso à la place des images ?
+																																																																																																																																						Wouah je suis ravie et demain matin je travaillerai toutes tes questions.
+																																																																																																																																						Merci de tout cœur 🙏</p>
 			<div class="rating text-secondary">
 				<i class="fas fa-star"></i>
 				<i class="fas fa-star"></i>

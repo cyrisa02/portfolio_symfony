@@ -17,9 +17,9 @@
 				<li class="nav-item">
 					<a class="nav-link" href="{{ path('app_project_indexangular')}}" style="font-size: 3rem;">Angular</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#" style="font-size: 3rem;">React</a>
-				</li>
+				{# <li class="nav-item">
+									<a class="nav-link" href="#" style="font-size: 3rem;">React</a>
+								</li> #}
 				<li class="nav-item">
 					<a class="nav-link" href="{{ path('app_project_indexwordpress')}}" style="font-size: 3rem;">Wordpress</a>
 				</li>
@@ -27,20 +27,21 @@
 					<a class="nav-link" href="{{ path('app_contact_new')}}" style="font-size: 3rem;">Me Contacter</a>
 				</li>
 				{# <li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-									<div class="dropdown-menu">
-										<a class="dropdown-item" href="#">Action</a>
-										<a class="dropdown-item" href="#">Another action</a>
-										<a class="dropdown-item" href="#">Something else here</a>
-										<div class="dropdown-divider"></div>
-										<a class="dropdown-item" href="#">Separated link</a>
-									</div>
-								</li> #}
+																																	<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+																																	<div class="dropdown-menu">
+																																		<a class="dropdown-item" href="#">Action</a>
+																																		<a class="dropdown-item" href="#">Another action</a>
+																																		<a class="dropdown-item" href="#">Something else here</a>
+																																		<div class="dropdown-divider"></div>
+																																		<a class="dropdown-item" href="#">Separated link</a>
+																																	</div>
+																																</li> #}
 			</ul>
 			<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 				{% if app.user %}
 					<li class="nav-item">
-						<a class="nav-link" href="#">Mon compte</a>
+						<a class="nav-link" href="{{ path('app_project1_index') }}">Projet</a>
+
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="{{ path('app_logout') }}">Me déconnecter</a>
@@ -48,40 +49,9 @@
 				{% endif %}
 			</ul>
 			{# <form class="d-flex">
-																									<input class="form-control me-sm-2" type="text" placeholder="Search">
-																									<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-																								</form> #}
-		</div>
-	</div>
-</nav>
-
-<nav class="navbar navbar-light bg-light shadow-sm">
-	<div class="container-lg">
-		<a class="navbar-brand text-primary fw-bold fs-4" href="#">C.G</a>
-
-		<div class="nav-item dropdown">
-			<button class="nav-link btn btn-secondary  px-3" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-				<i class="fas fa-bars"></i>
-			</button>
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="{{ path('home.index')}}">Accueil</a>
-
-				<a class="dropdown-item" href="#about">A propos</a>
-				<a class="dropdown-item" href="#services">Prestations</a>
-
-
-				<a class=" dropdown-item" href=" {{ path('app_project_indexsymfony')}} ">Symfony</a>
-				<a class="dropdown-item" href="{{ path('app_project_indexangular')}}">Angular</a>
-				<a class="dropdown-item" href="{{ path('app_project_indexwordpress')}}">Wordpress</a>
-				<a class="dropdown-item" href="#testimonials">Témoignages</a>
-
-
-				<a class="dropdown-item" href="{{ path('app_contact_new')}}">Me Contacter</a>
-
-
-				{# <div class="dropdown-divider"></div>
-																																		<a class="dropdown-item" href="#">Separated link</a> #}
-			</div>
+																																											<input class="form-control me-sm-2" type="text" placeholder="Search">
+																																											<button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+																																										</form> #}
 		</div>
 	</div>
 </nav>
