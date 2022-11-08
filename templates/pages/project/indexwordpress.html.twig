@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Symfony
+{% block title %}Wordpress
 {% endblock %}
 
 {% block body %}
@@ -9,7 +9,7 @@
 </div>
 <br>
 {% for project in projects | reverse %}
-	{% if project.isSymfony %}
+	{% if project.isWordpress %}
 		<!-- Projet Start -->
 		<section class="home py-5" id="home">
 			<div class="container-lg">

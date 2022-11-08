@@ -38,6 +38,13 @@ class ProjectController extends AbstractController
         ]);
     }
 
+    #[Route('/wordpress', name: 'app_project_indexwordpress', methods: ['GET'])]
+    public function indexwordpress(ProjectRepository $projectRepository): Response
+    {
+        return $this->render('pages/project/indexwordpress.html.twig', [
+            'projects' => $projectRepository->findAll(),
+        ]);
+    }
 
 
     #[Route('/new', name: 'app_project_new', methods: ['GET', 'POST'])]
