@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Project{% endblock %}
+
+{% block body %}
+    <h1>Project</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ project.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ project.title }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ project.description }}</td>
+            </tr>
+            <tr>
+                <th>Urllink</th>
+                <td>{{ project.urllink }}</td>
+            </tr>
+            <tr>
+                <th>Githublink</th>
+                <td><a href="{{ project.githublink }}">{{ project.githublink }}</a></td>
+            </tr>
+            <tr>
+                <th>Picture</th>
+                <td>{% if project.picture is defined %}
+								<img src="{{ asset('uploads/') }}{{ project.picture }}" alt="{{ project.title }}" style="max-width: 7rem; height: auto; border-radius: 50%;">
+							{% else %}
+								<p>Votre carte n'est pas valide!</p>
+							{% endif %}
+							
+                
+                
+               </td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ project.createdAt ? project.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>IsSymfony</th>
+                <td>{{ project.isSymfony ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>IsAngular</th>
+                <td>{{ project.isAngular ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>IsReact</th>
+                <td>{{ project.isReact ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>IsWordpress</th>
+                <td>{{ project.isWordpress ? 'Yes' : 'No' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_project_index') }}">back to list</a>
+
+    <a href="{{ path('app_project_edit', {'id': project.id}) }}">edit</a>
+
+    {{ include('pages/project/_delete_form.html.twig') }}
+{% endblock %}
