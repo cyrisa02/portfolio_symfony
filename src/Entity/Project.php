@@ -2,11 +2,14 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 use App\Repository\ProjectRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ProjectRepository::class)]
+#[ApiResource]
 class Project
 {
     #[ORM\Id]
@@ -43,6 +46,9 @@ class Project
 
     #[ORM\Column(nullable: true)]
     private ?bool $isWordpress = null;
+
+    #[ORM\Column(length: 190, nullable: true)]
+    private ?string $urlpicture = null;
 
      public function __construct()
     {
@@ -171,6 +177,18 @@ class Project
     public function setIsWordpress(?bool $isWordpress): self
     {
         $this->isWordpress = $isWordpress;
+
+        return $this;
+    }
+
+    public function getUrlpicture(): ?string
+    {
+        return $this->urlpicture;
+    }
+
+    public function setUrlpicture(?string $urlpicture): self
+    {
+        $this->urlpicture = $urlpicture;
 
         return $this;
     }

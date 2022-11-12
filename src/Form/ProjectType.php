@@ -71,7 +71,17 @@ class ProjectType extends AbstractType
                 ],
                 
             ])
-          
+            ->add('urlangular', TextType::class, [
+                'attr' => [
+                    'class' => 'form-control',
+                    'minlenght' => '2',
+                    'maxlenght' => '190',
+                ],
+                'label' => 'Lien URL pour angular',
+                'label_attr' => [
+                    'class' => 'form-label  mt-4'
+                ],
+           ])
             ->add('isSymfony')
             ->add('isAngular')
             ->add('isReact')
