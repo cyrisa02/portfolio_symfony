@@ -1,12 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Me Contacter{% endblock %}
+{% block title %}Me Contacter
+{% endblock %}
 
 {% block body %}
-<div class="container mt-4"><h1>Me contacter</h1>
+	<div class="container mt-4">
+		<h1>Me contacter</h1>
 
-    {{ include('pages/contact/_form.html.twig') }}
 
-    <a class="btn btn-secondary btn-lg mt-4" href="{{ path('home.index') }}">Accueil</a></div>
-    
+		{{ include('pages/contact/_form.html.twig') }}
+
+		<a class="btn btn-secondary btn-lg mt-4" href="https://portfoliocg-ae2ff.web.app/">Accueil</a>
+	</div>
+
+
 {% endblock %}
