@@ -71,7 +71,7 @@ class ProjectType extends AbstractType
                 ],
                 
             ])
-            ->add('urlangular', TextType::class, [
+            ->add('urlpicture', TextType::class, [
                 'attr' => [
                     'class' => 'form-control',
                     'minlenght' => '2',
